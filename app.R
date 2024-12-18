@@ -18,7 +18,7 @@ library(bslib)
 
 #Set Puzzle list
 puzzle_words <- c("Word 1", "Word 2", "Word 3", "Word 4", "Word 5", "Word 6", "Word 7", "Word 8", "Word 9")
-is_blank <- c(TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE)
+is_blank <- c(FALSE, TRUE, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE, FALSE) #is the square prefilled or requires an answer
 puzzle_frame <- data.frame(puzzle_words, is_blank)
 
 # Define UI for application
@@ -36,7 +36,7 @@ ui <- page_fillable( # can run this instead to fill entire page
     },
     #Cell 2 Code
     if (puzzle_frame$is_blank[2] == TRUE) {
-      card(textInput("word2_answer", "Answer1:"))
+      card(textInput("word2_answer", "Answer2:"))
     }
     else {
       card(puzzle_words[2])
@@ -44,7 +44,7 @@ ui <- page_fillable( # can run this instead to fill entire page
     
     #Cell 3 Code
     if (puzzle_frame$is_blank[3] == TRUE) {
-      card(textInput("word3_answer", "Answer1:"))
+      card(textInput("word3_answer", "Answer3:"))
     }
     else {
       card(puzzle_words[3])
@@ -53,14 +53,14 @@ ui <- page_fillable( # can run this instead to fill entire page
   layout_columns(
     #Cell 4 Code
     if (puzzle_frame$is_blank[4] == TRUE) {
-      card(textInput("word4_answer", "Answer1:"))
+      card(textInput("word4_answer", "Answer4:"))
     }
     else {
       card(puzzle_words[4])
     },
     #Cell 5 Code
     if (puzzle_frame$is_blank[5] == TRUE) {
-      card(textInput("word5_answer", "Answer1:"))
+      card(textInput("word5_answer", "Answer5:"))
     }
     else {
       card(puzzle_words[5])
@@ -68,7 +68,7 @@ ui <- page_fillable( # can run this instead to fill entire page
     
     #Cell 6 Code
     if (puzzle_frame$is_blank[6] == TRUE) {
-      card(textInput("word6_answer", "Answer1:"))
+      card(textInput("word6_answer", "Answer6:"))
     }
     else {
       card(puzzle_words[6])
@@ -77,7 +77,7 @@ ui <- page_fillable( # can run this instead to fill entire page
   layout_columns(
     #Cell 7 Code
     if (puzzle_frame$is_blank[7] == TRUE) {
-      card(textInput("word7_answer", "Answer1:"))
+      card(textInput("word7_answer", "Answer7:"))
     }
     else {
       card(puzzle_words[7])
@@ -85,7 +85,7 @@ ui <- page_fillable( # can run this instead to fill entire page
     
     #Cell 8 Code
     if (puzzle_frame$is_blank[8] == TRUE) {
-      card(textInput("word8_answer", "Answer1:"))
+      card(textInput("word8_answer", "Answer8:"))
     }
     else {
       card(puzzle_words[8])
@@ -93,7 +93,7 @@ ui <- page_fillable( # can run this instead to fill entire page
     
     #Cell 9 Code
     if (puzzle_frame$is_blank[9] == TRUE) {
-      card(textInput("word9_answer", "Answer1:"))
+      card(textInput("word9_answer", "Answer9:"))
     }
     else {
       card(puzzle_words[9])
